@@ -11,12 +11,25 @@
   padding-right: 32px;
   margin-left: auto;
   margin-right: auto;
-  overflow-x: scroll;
+  z-index: 5;
 }
 
+@media (max-width: 600px) {
+  .maxWidthWrapper {
+    margin-top: 80%;
+    overflow-x: auto;
+  }
+}
 .header {
+  display: block;
   padding-bottom: 64px;
   width: 65%;
+}
+
+@media (max-width: 600px) {
+  .header {
+    display: none;
+  }
 }
 
 .title {
@@ -34,12 +47,30 @@
 
 .characterWrapper {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  right: 0;
+}
+
+@media (max-width: 600px) {
+  .characterWrapper {
+    position: fixed;
+    left: 0;
+  }
 }
 
 .controlColumn {
+  display: flex;
+  flex-direction: column;
   width: 50%;
+}
+
+@media (max-width: 600px) {
+  .controlColumn {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    overflow-x: scroll;
+  }
 }
 
 .firstPart {
@@ -58,4 +89,10 @@
   height: 100%;
   position: fixed;
   top: 0;
+}
+
+@media (max-width: 600px) {
+  .bodyStyle {
+    display: none;
+  }
 }

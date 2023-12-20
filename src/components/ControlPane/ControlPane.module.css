@@ -10,7 +10,14 @@
     to deal with it yet!
   */
   margin-bottom: 32px;
+  margin-right: 32px;
   overflow: auto;
+}
+
+@media (max-width: 600px) {
+  .controlPane {
+    width: 336px;
+  }
 }
 
 .title {
